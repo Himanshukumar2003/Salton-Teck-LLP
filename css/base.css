@@ -118,6 +118,10 @@ template {
     display: none;
 }
 
+.active {
+    color: var(--pbmit-link-color-hover) !important;
+}
+
 a {
     background-color: transparent;
 }
