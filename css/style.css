@@ -3532,7 +3532,6 @@ footer img {
     max-height: 350px !important;
     width: 100%;
     border-radius: 20px;
-    object-fit: contain;
     aspect-ratio: 1;
 }
 
@@ -3629,4 +3628,10 @@ footer img {
 .section-title {
     font-weight: bold;
     margin-bottom: 1rem;
+}
+
+
+.lead-two {
+    font-size: 21px;
+    font-weight: 400;
 }

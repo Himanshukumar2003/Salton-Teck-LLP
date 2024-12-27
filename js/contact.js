@@ -1,43 +1,64 @@
 function validateForm() {
     let isValid = true;
 
-    // Clear previous error messages
-    document.querySelectorAll('.error-message').forEach(el => el.textContent = '');
-
-    // Validate Name
+    // Get form fields
     const name = document.getElementById('name').value.trim();
-    if (!name) {
-        document.getElementById('nameError').textContent = "Name is required.";
-        isValid = false;
-    }
-
-    // Validate Email
     const email = document.getElementById('email').value.trim();
-    if (!email || !email.match(/^\S+@\S+\.\S+$/)) {
-        document.getElementById('emailError').textContent = "Please enter a valid email address.";
-        isValid = false;
-    }
-
-    // Validate Phone
     const phone = document.getElementById('phone').value.trim();
-    if (!phone || !phone.match(/^\d{10}$/)) {
-        document.getElementById('phoneError').textContent = "Please enter a valid 10-digit phone number.";
-        isValid = false;
-    }
-
-    // Validate Subject
     const subject = document.getElementById('subject').value.trim();
-    if (!subject) {
-        document.getElementById('subjectError').textContent = "Subject is required.";
-        isValid = false;
-    }
-
-    // Validate Message
     const message = document.getElementById('message').value.trim();
-    if (!message) {
-        document.getElementById('messageError').textContent = "Message is required.";
+
+    // Get error message elements
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const phoneError = document.getElementById('phoneError');
+    const subjectError = document.getElementById('subjectError');
+    const messageError = document.getElementById('messageError');
+
+    // Clear previous error messages
+    nameError.textContent = '';
+    emailError.textContent = '';
+    phoneError.textContent = '';
+    subjectError.textContent = '';
+    messageError.textContent = '';
+
+    // Validate name
+    if (!name) {
+        nameError.textContent = 'Name is required.';
         isValid = false;
     }
 
-    return isValid; // Submit form only if all validations pass
+    // Validate email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email) {
+        emailError.textContent = 'Email is required.';
+        isValid = false;
+    } else if (!emailRegex.test(email)) {
+        emailError.textContent = 'Invalid email format.';
+        isValid = false;
+    }
+
+    // Validate phone
+    const phoneRegex = /^\d{10}$/;
+    if (!phone) {
+        phoneError.textContent = 'Phone number is required.';
+        isValid = false;
+    } else if (!phoneRegex.test(phone)) {
+        phoneError.textContent = 'Invalid phone number.';
+        isValid = false;
+    }
+
+    // Validate subject
+    if (!subject) {
+        subjectError.textContent = 'Subject is required.';
+        isValid = false;
+    }
+
+    // Validate message
+    if (!message) {
+        messageError.textContent = 'Message is required.';
+        isValid = false;
+    }
+
+    return isValid;
 }
