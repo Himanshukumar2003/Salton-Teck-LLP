@@ -39,12 +39,5 @@ function validateForm() {
         isValid = false;
     }
 
-    // Validate Consent
-    const consent = document.getElementById('consent').checked;
-    if (!consent) {
-        document.getElementById('consentError').textContent = "You must agree to save your data.";
-        isValid = false;
-    }
-
-    return isValid;
+    return isValid; // Submit form only if all validations pass
 }

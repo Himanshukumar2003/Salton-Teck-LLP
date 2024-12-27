@@ -32,6 +32,10 @@
 	Swiper Slider
 	-------------------------------------*/
 
+	$('.navbar-toggler, .closepanel').on('click', function () {
+		console.log("Navbar toggled"); // Replace 'homamasnk' with a valid message or variable
+		jQuery("header").toggleClass("active");
+	});
 
 	function showProducts(id) {
 		document.querySelectorAll('.swiper-container-two').forEach(container => {
@@ -350,7 +354,7 @@
 	/*-------------------------------------
 	Active Hover
 	-------------------------------------*/
-	$(".active-onhover .pbmit-miconheading-style-2: nth-child(2)").addClass('pbmit-mihbox-hover-active');
+	$(".active-onhover .pbmit-miconheading-style-2:nth-child(2)").addClass('pbmit-mihbox-hover-active');
 
 	$(".active-onhover .pbmit-miconheading-style-2").mouseover(function () {
 		var main_row = $(this).closest('.active-onhover');
@@ -359,9 +363,9 @@
 	}).mouseout(function () {
 		var main_row = $(this).closest('.active-onhover');
 		$('.pbmit-miconheading-style-2', main_row).removeClass('pbmit-mihbox-hover-active');
-		$('.pbmit-miconheading-style-2: nth-child(2)', main_row).addClass('pbmit-mihbox-hover-active');
-
+		$('.pbmit-miconheading-style-2:nth-child(2)', main_row).addClass('pbmit-mihbox-hover-active');
 	});
+
 
 	/*-------------------------------------
 		tooltip
@@ -374,9 +378,6 @@
 	/*-------------------------------------
 		Mobile Menu
 	-------------------------------------*/
-	$('.navbar-toggler,.closepanel').on('click', function () {
-		jQuery("header").toggleClass("active");
-	});
 
 	/*-------------------------------------
 	Sticky header wrapper

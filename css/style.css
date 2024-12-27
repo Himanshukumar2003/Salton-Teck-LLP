@@ -39,6 +39,10 @@
     height: 100%;
 }
 
+.open {
+    overflow: hidden;
+}
+
 .about-one-leftbox .ihbox-style-area {
     position: absolute;
     width: auto;

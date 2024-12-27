@@ -801,7 +801,6 @@ body {
 
 		height: auto;
 		display: flex;
-		flex-wrap: wrap;
 	}
 
 	.main-menu .navigation>li>ul,
@@ -4054,7 +4053,7 @@ body {
 
 @media (min-width:0px) and (max-width:1201px) {
 	li.dropdown ul .menu-item {
-		padding: 5px 0 !important;
+		padding: 5px !important;
 	}
 
 	.navigation>li.dropdown:hover>ul {

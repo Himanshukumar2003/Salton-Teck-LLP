@@ -1327,3 +1327,24 @@ li.dropdown ul h2 {
 
     }
 }
+
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: #333;
+    opacity: 50%;
+}
+
+.pbmit-title-bar-wrapper {
+    position: relative;
+}
+
+
+.pbmit-button-icon i {
+    font-size: 21px;
+    font-weight: 900;
+
+}
